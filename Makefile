@@ -9,6 +9,7 @@ BOARD ?= iob_aes_ku040_db_g
 
 FE_IF ?= IOb
 BE_IF ?= AXI4
+BE_DATA_W ?= 128
 
 # Fill PY_PARAMS if not defined
 ifeq ($(PY_PARAMS),)
