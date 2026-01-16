@@ -184,14 +184,16 @@ int iob_core_tb() {
   // init Cache Control
   iob_cache_csrs_init_baseaddr(CACHE_CTRL_BASE);
 
+  printf("Simple test\n");
   // simple cache access test
   failed += simple_test(5);
-
+  printf("Data test\n");
   failed += data_test();
+  printf("Address test\n");
   failed += address_test();
-
+  printf("LRU test\n");
   failed += lru_test(IOB_CACHE_CSRS_NWAYS_W, IOB_CACHE_CSRS_NLINES_W);
-
+  printf("ctrl test\n");
   failed += ctrl_test();
 
   printf("CACHE test complete.\n");
